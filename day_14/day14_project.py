@@ -8,6 +8,9 @@ def main():
     compare_b = random.choice(game_data.data)
 
     while True:
+        while compare_a==compare_b:
+            compare_b = random.choice(game_data.data)
+            
         print(art.logo)
         print(f"Compare A: {compare_a['name']}, {compare_a['description']}, from {compare_a['country']}.")
         print(art.vs)
@@ -30,5 +33,5 @@ def main():
         else:
             print(f"Sorry, that's wrong. Final score: {score}.")
             break
-            
+
 main()
